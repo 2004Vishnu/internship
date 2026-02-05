@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>fruits</h1>
+    <select name="fruits" id="fruits" >
+        <option value="select">--Select a fruit--</option>
+        <option >Apple</option>
+        <option value="banana">pineapple</option>
+        <option value="cherry">Cherry</option>
+    </select>
+
+</div>
+    <p id="img"></p>
+    
+<img src="butter naan.png"  alt="" id="myimg">
+<br>
+
+    <a href="https://www.w3schools.com" id="link">Go to W3Schools</a>
+
+<p id="demo"></p>
+
+<script>
+
+        let p= document.getElementById("fruit");
+      let q=document.getElementById("fruits").onchange=function(e){
+    console.log(e) 
+        p.innerText=e.target.value;}
+
+
+let img1=document.getElementById("myimg");
+img1.addEventListener("load",function(){
+     document.getElementById("img").innerHTML = "Page is fully loaded!";
+    })
+
+    const link = document.getElementById("link");
+
+
+link.addEventListener("click", function (event) {
+  event.preventDefault();
+  document.getElementById("demo").innerHTML = "Link blocked!";
+});
+    </script>
+      
+
+      
+</body>
+</html>
