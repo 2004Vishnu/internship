@@ -10,7 +10,7 @@ img1.addEventListener("load",function(){
     })
 
     function copyText() {
-      const text = document.getElementById("content").value;
+      const text = "internship";
       window.navigator.clipboard.writeText(text);
     }
       
@@ -26,3 +26,9 @@ img1.addEventListener("load",function(){
         .then(text => {
           document.getElementById("content1").value = text;
         });}
+
+        const txt=document.getElementById("content");
+        txt.oncopy=function(e){
+          this.text=text;
+          window.navigator.clipboard.writeText(text);
+        }
