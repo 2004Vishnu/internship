@@ -1,11 +1,9 @@
 * {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  height: 100vh;
+  margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +16,10 @@ body {
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
 }
+
 
 h1 {
   text-align: center;
@@ -58,6 +59,7 @@ button:hover {
 
 .clear {
   background: #f44336;
+  width:80px;
 }
 
 ul {
@@ -68,8 +70,8 @@ ul {
 
 li {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 10px;
   margin-top: 8px;
@@ -77,30 +79,20 @@ li {
   border-radius: 6px;
 }
 
-li.completed {
-  background: #eeeeee;
-}
-
-li.completed span {
-  text-decoration: line-through;
-  color: gray;
-}
-
-.task-left {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.actions {
-  display: flex;
-  gap: 6px;
-}
-
-.edit-btn {
-  background: #ff9800;
-}
-
 .delete-btn {
   background: #e53935;
+}
+
+.btngrp button{
+  height:40px;
+}
+
+.edit{
+  background-color: rgb(189, 189, 27);
+}
+button{
+  background-color: green;
+}
+.checkbox{
+  background-color: red;
 }
