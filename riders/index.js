@@ -6,7 +6,7 @@
         el: ".swiper-pagination",
         clickable: true,
       },
-      // autoplay:{
-      //   delay:1000,
-      // }
+      autoplay:{
+        delay:3000,
+      }
     });

@@ -1,26 +1,26 @@
  :root {
-      --primary-color: #f9efec;
-      --secondary-color: #0a1f58;
+      --primary: #f9efec;
+      --secondary: #0a1f58;
     }
  body{
   background-color:#f9efec;
  }
- .swiper {
+ /* .swiper {
   width: 82%;
   height: 400px;
-}
+} */
 /* .swiper1{
   width:50%;
 } */
 
-    .swiper-slide {
+    /* .swiper-slide {
       text-align: center;
-      font-size: 18px;
+      font-size: 18px; */
       /* background: #444; */
-      display: flex;
+      /* display: flex;
       justify-content: center;
       align-items: center;
-    } 
+    }  */
 
     /* .swiper-slide img {
   width: 50%;

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+    <form action="/" target="_blank" method="post">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" autocomplete="on" required minlength="4"><br><br>
+        <label for="lname">Last name:</label> <br>
+        <input type="text" id="lname" name="lname" required="4"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email"required placeholder="Enter your email" id="email" name="email">
+        <br><br>
+        <label for="phno">Phone</label><br>
+        <input type="number" id="phno" name="phno" pattern="[0-9]{10}" placeholder="Enter 10 digit number" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+</body>
+</html>
