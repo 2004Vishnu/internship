@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="index.css">
+  <title>RIDERR</title>
+  <link rel="stylesheet" href="Home.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="Home.js"></script>
   <!-- <script>
     tailwind.config = {
       theme: {
@@ -21,14 +22,13 @@
       }
 
     }
-  </script> -->
-  
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 <body>
   <header>
-    <nav class="mt-7">
+    <nav class="mt-7 bg-secondary">
       <div class="flex">
-        <!-- <p class="text-3xl w-1/2 ml-20 content-center">Rider</p> -->
          <figure class="w-1/2">
           <img src="Reride_Logo.png" alt="logo" class="h-15 w-40 ml-20">
          </figure>
@@ -51,7 +51,6 @@
         <p class="text-5xl text-[#0a1f58] font-bold">bike gets second <br>
           <span class="bg-gradient-to-tr from-red-500 via-indigo-500 to-yellow-500 text-transparent bg-clip-text">chance of love</span>
         </p>
-        <!-- <p class="text-5xl text-[#0a1f58] font-bold">chance of love</p> -->
         </div>
         <br>
         <hr>
@@ -100,7 +99,7 @@
         <div class="mx-20 mt-10 flex ">
           <button class="bg-[#0a1f58] text-white flex pr-4 pl-2 content-center rounded-xl py-2 font-sans mr-5  shadow-5xl">
           <i data-lucide="search" class="h-8 w-8 px-1 py-2 text-white "></i> Buy Used Bikes </button>
-          <button class="bg-white text-[#0a1f58] flex pr-4 pl-2 content-center rounded-xl py-2 font-sans">
+          <button class="bg-white text-[#0a1f58] flex pr-4 pl-2 content-center rounded-xl py-2 font-sans border-2 border-[var(--secondary)]">
           <i data-lucide="camera" class="h-8 w-8 px-1 py-2 text-[#0a1f58]"></i> Sell Your Bike </button>
         </div>
         <br>
@@ -128,12 +127,193 @@
   </header>
   <main>
     <section class="mt-15 mx-20">
+      <div>
       <h2 class="text-[#0a1f58] text-4xl ">Fresh Arrivals</h2>
-      <p class="text-gray-700">Handpicked bikes verified for quality and price.</p>
+      </div>
+      <div class="flex justify-between">
+      <p class="text-gray-700 ">Handpicked bikes verified for quality and price.</p>
+      <a href="" class="flex text-[var(--secondary)]">View All Inventory <i data-lucide="arrow-right" class="h-8 w-8 px-2"></i></a>
+      </div>
+      <br>
+
+      <!--card-->
+      <!-- <article class="">
+        <div class="">
+          <div class="bg-[#0a1f58] text-white w-25 text-center rounded-xl">
+            New Listing
+          </div>
+          <img src="Honda sp 125.png" alt="">
+          <div class=" text-[#0a1f58] bg-white w-25 text-center text-lg rounded-xl justify-end">
+            ₹1.2 Lakh
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <p class="text-[#0a1f58] text-2xl">Hero Splendor Plus</p>
+          <p class=" flex text-gray-700">2022 <i data-lucide="dot"></i>5,000KMs <i data-lucide="dot">
+          </i>Indiranagar</p>
+          <button class="bg-white text-[#0a1f58] border-2 border-[#0a1f58] rounded-xl">View Details</button>
+        </div>
+      </article>
     </section>
   </main>
+<br><br><br> -->
+  <!--swiper-->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide rounded-xl bg-white">
+        <article class="rounded-xl">
+        <div class="relative">
+          <span class="absolute top-2 left-0 bg-[#0a1f58] text-white px-2 ml-3 text-center rounded-xl">
+            New Listing
+          </span>
+          <img src="hero1.png" alt="" class="rounded-t-xl">
+        </div>
+        <div class="flex flex-col ml-5 mr-5 bg-white">
+          <div class="flex justify-between content-center text-[#0a1f58]">
+          <p class="text-2xl">Hero Splendor Plus</p>
+          <span class="text-md pt-2 bg-white rounded-xl">₹60,000</span>
+          </div>
+          <p class=" flex text-gray-700">2022 <i data-lucide="dot"></i>5,000KMs <i data-lucide="dot">
+          </i>Indiranagar</p>
+          <button class="bg-white text-[#0a1f58] border-2 border-[#0a1f58] my-5 rounded-xl">View Details</button>
+        </div>
+      </article>
+      </div>
+       <div class="swiper-slide rounded-xl bg-white">
+        <article class="rounded-xl">
+        <div class="relative">
+          <span class="absolute top-2 left-0 bg-[#0a1f58] text-white px-2 ml-3 text-center rounded-xl">
+            New Listing
+          </span>
+          <img src="hero1.png" alt="" class="rounded-t-xl">
+        </div>
+        <div class="flex flex-col ml-5 mr-5 bg-white">
+          <div class="flex justify-between content-center text-[#0a1f58]">
+          <p class="text-2xl">Hero Splendor Plus</p>
+          <span class="text-md pt-2 bg-white rounded-xl">₹60,000</span>
+          </div>
+          <p class=" flex text-gray-700">2022 <i data-lucide="dot"></i>5,000KMs <i data-lucide="dot">
+          </i>Indiranagar</p>
+          <button class="bg-white text-[#0a1f58] border-2 border-[#0a1f58] my-5 rounded-xl">View Details</button>
+        </div>
+      </article>
+      </div>
+       <div class="swiper-slide rounded-xl bg-white">
+        <article class="rounded-xl">
+        <div class="relative">
+          <span class="absolute top-2 left-0 bg-[#0a1f58] text-white px-2 ml-3 text-center rounded-xl">
+            New Listing
+          </span>
+          <img src="hero1.png" alt="" class="rounded-t-xl">
+        </div>
+        <div class="flex flex-col ml-5 mr-5 bg-white">
+          <div class="flex justify-between content-center text-[#0a1f58]">
+          <p class="text-2xl">Hero Splendor Plus</p>
+          <span class="text-md pt-2 bg-white rounded-xl">₹60,000</span>
+          </div>
+          <p class=" flex text-gray-700">2022 <i data-lucide="dot"></i>5,000KMs <i data-lucide="dot">
+          </i>Indiranagar</p>
+          <button class="bg-white text-[#0a1f58] border-2 border-[#0a1f58] my-5 rounded-xl">View Details</button>
+        </div>
+      </article>
+      </div>
+      <div class="swiper-slide rounded-xl bg-white">
+        <article class="rounded-xl">
+        <div class="relative">
+          <span class="absolute top-2 left-0 bg-[#0a1f58] text-white px-2 ml-3 text-center rounded-xl">
+            New Listing
+          </span>
+          <img src="hero1.png" alt="" class="rounded-t-xl">
+        </div>
+        <div class="flex flex-col ml-5 mr-5 bg-white">
+          <div class="flex justify-between content-center text-[#0a1f58]">
+          <p class="text-2xl">Hero Splendor Plus</p>
+          <span class="text-md pt-2 bg-white rounded-xl">₹60,000</span>
+          </div>
+          <p class=" flex text-gray-700">2022 <i data-lucide="dot"></i>5,000KMs <i data-lucide="dot">
+          </i>Indiranagar</p>
+          <button class="bg-white text-[#0a1f58] border-2 border-[#0a1f58] my-5 rounded-xl">View Details</button>
+        </div>
+      </article>
+      </div>
+       <div class="swiper-slide rounded-xl bg-white">
+        <article class="rounded-xl">
+        <div class="relative">
+          <span class="absolute top-2 left-0 bg-[#0a1f58] text-white px-2 ml-3 text-center rounded-xl">
+            New Listing
+          </span>
+          <img src="hero1.png" alt="" class="rounded-t-xl">
+        </div>
+        <div class="flex flex-col ml-5 mr-5 bg-white">
+          <div class="flex justify-between content-center text-[#0a1f58]">
+          <p class="text-2xl">Hero Splendor Plus</p>
+          <span class="text-md pt-2 bg-white rounded-xl">₹60,000</span>
+          </div>
+          <p class=" flex text-gray-700">2022 <i data-lucide="dot"></i>5,000KMs <i data-lucide="dot">
+          </i>Indiranagar</p>
+          <button class="bg-white text-[#0a1f58] border-2 border-[#0a1f58] my-5 rounded-xl">View Details</button>
+        </div>
+      </article>
+      </div>
+       <div class="swiper-slide rounded-xl bg-white">
+        <article class="rounded-xl">
+        <div class="relative">
+          <span class="absolute top-2 left-0 bg-[#0a1f58] text-white px-2 ml-3 text-center rounded-xl">
+            New Listing
+          </span>
+          <img src="hero1.png" alt="" class="rounded-t-xl">
+        </div>
+        <div class="flex flex-col ml-5 mr-5 bg-white">
+          <div class="flex justify-between content-center text-[#0a1f58]">
+          <p class="text-2xl">Hero Splendor Plus</p>
+          <span class="text-md pt-2 bg-white rounded-xl">₹60,000</span>
+          </div>
+          <p class=" flex text-gray-700">2022 <i data-lucide="dot"></i>5,000KMs <i data-lucide="dot">
+          </i>Indiranagar</p>
+          <button class="bg-white text-[#0a1f58] border-2 border-[#0a1f58] my-5 rounded-xl">View Details</button>
+        </div>
+      </article>
+      </div>
+      <!-- <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div> -->
+    </div>
+    <br>
+    <div class="swiper-pagination "></div>
+  </div>
+  </section>
+  <br><br><br>
+
+<!--HOW IT WORKS-->
+<section>
+  <h2 class="text-[var(--secondary)] text-center text-4xl font-semibold">How It Works</h2>
+  <div class="flex mt-5 px-20">
+    <div class="w-1/3 bg-white">
+      <p>For Buyers</p>
+    </div>
+    <div class="flex w-2/3 flex-col">
+      <div>
+        <p>01</p>
+        <p>Browse & Filter</p>
+        <p>Find Bikes by budger, model or location near you.</p>
+      </div>
+      <div>
+        <p>02</p>
+        <p>Chat With Seller</p>
+        <p>Ask questions via our secure chat system.</p>
+      </div>
+      <div>
+        <p>03</p>
+        <p>Test Ride & Buy</p>
+        <p>Meet vafety, verify documents and ride away</p>
+      </div>
+    </div>
+  </div>
+</section>
+
   <script>
     lucide.createIcons();
   </script>
+  <script src="Home.js"></script>
 </body>
 </html>
