@@ -6,7 +6,19 @@
       pagination: {
         el: ".swiper-pagination",
       },
-    //   autoplay:{
-    //     delay:3000,
-    //   }
+        autoplay:{
+          delay:3000,
+        }
+    });
+
+    var swiper = new Swiper(".mySwiper1", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop:true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      autoplay:{
+        delay:7000,
+      }
     });

@@ -1,12 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<title> Worst UI</title>
+
+<style>
+
+body {
+    background: repeating-linear-gradient(
+        90deg,
+        red,
+        red 20px,
+        yellow,
+        yellow 40px
+    );
+    font-family: "Comic Sans MS", Papyrus, cursive;
+    margin: 0;
+}
+
+h1 {
+    font-size: 80px;
+    color: lime;
+    background: cyan;
+    text-align: right;
+    text-transform: uppercase;
+    transform: rotate(15deg);
+    margin: 0;
+}
+.nav {
+    position: absolute;
+    top: 5px;
+    left: 300px;
+}
+
+.nav a {
+    display: inline-block;
+    background: orange;
+    color: purple;
+    font-size: 30px;
+    padding: 5px;
+    border: 6px dotted blue;
+    text-decoration: none;
+}
+
+.container {
+    width: 250px;
+    margin-left: 150px;
+    margin-top: 50px;
+    width:200px;
+    background: linear-gradient(pink, green, blue);
+    border: 12px double black;
+    padding: 5px;
+}
+
+.notice {
+    background: black;
+    color: yellow;
+    font-size: 10px;
+    padding: 10px;
+}
+
+input {
+    width: 60px;
+    font-size: 28px;
+    background: black;
+    color: darkblue;
+    border: none;
+}
+
+textarea {
+    width: 100%;
+    height: 20px;
+    font-size: 7px;
+    background: lightgray;
+    color: white;
+}
+
+button {
+    font-size: 35px;
+    background: linear-gradient(red, blue, green);
+    border-radius: 50%;
+    padding: 25px;
+    border: 8px dashed purple;
+    cursor: pointer;
+}
+
+p {
+    font-size: 6px;
+    color: lightgray;
+    background: white;
+    text-align: justify;
+    margin: 0;
+}
+
+img {
+    width: 700px;
+    height: 120px;
+    object-fit: cover;
+    border: 15px solid magenta;
+    position: relative;
+    left: 250px;
+}
+
+</style>
 </head>
+
 <body>
-    <p style="color:red">oops something wrong please <a href="button.html" style="color:green">try again</a></p>
-    
+
+<h1>BEST WEBSITE EVER</h1>
+
+<div class="nav">
+    <a href="#">HOME</a>
+    <a href="#">ABOUT</a>
+    <a href="#">CONTACT</a>
+</div>
+
+<div class="container">
+    <h3 style="font-size:9px;">LOGIN IMMEDIATELY NOW FAST</h3>
+    <input type="text" placeholder="??">
+    <br><br>
+    <textarea placeholder="Write something"></textarea>
+    <br><br>
+    <button>CLICK!!!</button>
+</div>
+
+<div class="notice">
+    IMPORTANT!!!
+</div>
+
+<p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, sint consectetur ut similique consequuntur blanditiis quaerat quibusdam quo error, odit, tempore excepturi nostrum consequatur nobis nulla facere at qui. Voluptates?.
+</p>
+
+<img src="Yamaha-MT-15-v23.png" alt="image">
+
 </body>
 </html>

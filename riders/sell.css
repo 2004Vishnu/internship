@@ -1,0 +1,17 @@
+.step-btn-active {
+        background-color: var(--secondary) !important;
+        color: white !important;
+      }
+      .step-btn-inactive {
+        background-color: white !important;
+        color: #555 !important;
+        border: 1.5px solid #d1d5db !important;
+      }
+      .option-selected {
+        background-color: var(--secondary) !important;
+        color: white !important;
+        border-color: var(--secondary) !important;
+      }
+      .option-selected p, .option-selected span {
+        color: white !important;
+      }

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact us</title>
+    <link rel="stylesheet" href="Home.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <!--NAVBAR-->
+    <nav class="bg-[#f9efec] shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <img src="Reride_Logo.png" class="h-10">
+    <ul class="hidden md:flex gap-8 font-medium text-[#0a1f58]">
+      <li><a href="Home.html" class="hover:text-blue-600">Home</a></li>
+      <li><a href="Buy.html" class="hover:text-blue-600">Buy</a></li>
+      <li><a href="sell.html" class="hover:text-blue-600">Sell</a></li>
+      <li><a href="about.html" class="hover:text-blue-600">About</a></li>
+      <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+      <li>
+            <a
+              href="Buy.html"
+              class="flex items-center justify-center text-white bg-[#0a1f58] rounded-lg pl-2 pr-4"
+              ><i data-lucide="tag" class="h-7 w-7 px-2"></i>Buy Bike</a
+            >
+          </li>
+    </ul>
+  </div>
+</nav>
+
+    <!-- <div class="bg-white py-10">
+      <h1 class="text-center font-bold text-4xl">
+        Your Perfect Bike Is Just a Message Away.
+      </h1>
+      <p class="text-center text-grey-500 font-2xl pt-8">
+        Reach out to us for expert advice and seamless assistance. We’ll help
+        you find or sell your ride without hassle.
+      </p>
+    </div> -->
+    <section class="bg-[#0a1f58] py-16 px-6 text-white">
+    <div class=" flex flex-col md:flex-row items-center justify-center">
+      <div>
+        <p class="text-xl font-bold tracking-[0.2em] uppercase text-gray-500 mb-3">Get In Touch</p>
+        <h1 class="text-4xl md:text-4xl font-extrabold leading-tight mb-3">
+          Your Perfect Bike Is<br/>Just a Message Away.
+        </h1>
+        <p class="text-white/50 text-base max-w-md leading-relaxed">
+          Reach out for expert advice and seamless assistance. We'll help you find or sell your ride without the hassle.
+        </p>
+      </div>
+      
+    </div>
+  </section>
+    <section class="flex items-center justify-center">
+<!--MAP-->
+<div class="px-12 py-10 w-1/2 flex flex-col justify-start">
+  
+  <!-- Address Card -->
+  <div class="bg-white shadow-xl rounded-2xl p-6 mb-6 border border-gray-200">
+    <div class="flex items-start gap-4">
+      <div class="bg-red-100 p-3 rounded-xl">
+        <i data-lucide="map-pin" class="text-red-600 h-8 w-8"></i>
+      </div>
+      <p class="text-gray-700 leading-relaxed text-base">
+        2nd Floor, Chord Road, Above Pizza Hut,<br />
+        Opposite Cafe Coffee Day, Basaveshwar Nagar,<br />
+        Bengaluru, Karnataka 560079
+      </p>
+    </div>
+  </div>
+
+  <!-- Map -->
+  <div class="rounded-2xl overflow-hidden border border-gray-200">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6005580675223!2d77.53807687348299!3d12.997380914315709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d1200e15b97%3A0x35d3914e01dc541d!2sT%20Studios!5e0!3m2!1sen!2sin!4v1772605918269!5m2!1sen!2sin"
+      width="100%"
+      height="380"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+</div>
+    <!--FORM-->
+<div class="w-1/2 pb-10 pt-10">
+  <form
+    action="#"
+    method="POST"
+    class="space-y-6 px-12 mx-5 py-8 rounded-2xl shadow-xl bg-white border border-gray-200"
+  >
+    <h2 class="text-2xl font-bold text-center text-[#0a1f58] mb-4">
+      Send Us a Message
+    </h2>
+    <div>
+      <label class="block mb-2 font-semibold text-[#0a1f58]">
+        Full Name
+      </label>
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter your full name"
+        required
+        class="w-full px-4 py-3 border border-gray-300 rounded-xl 
+               focus:outline-none focus:ring-2 focus:ring-[#0a1f58] 
+               focus:border-[#0a1f58] transition"
+      />
+    </div>
+    <div>
+      <label class="block mb-2 font-semibold text-[#0a1f58]">
+        Email Address
+      </label>
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+        class="w-full px-4 py-3 border border-gray-300 rounded-xl 
+               focus:outline-none focus:ring-2 focus:ring-[#0a1f58] 
+               focus:border-[#0a1f58] transition"
+      />
+    </div>
+    <div>
+      <label class="block mb-2 font-semibold text-[#0a1f58]">
+        Phone Number
+      </label>
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Enter your phone number"
+        required
+        class="w-full px-4 py-3 border border-gray-300 rounded-xl 
+               focus:outline-none focus:ring-2 focus:ring-[#0a1f58] 
+               focus:border-[#0a1f58] transition"
+      />
+    </div>
+    <div>
+      <label class="block mb-2 font-semibold text-[#0a1f58]">
+        Message
+      </label>
+      <textarea
+        name="message"
+        rows="4"
+        placeholder="Write your message here..."
+        required
+        class="w-full px-4 py-3 border border-gray-300 rounded-xl 
+               focus:outline-none focus:ring-2 focus:ring-[#0a1f58] 
+               focus:border-[#0a1f58] transition resize-none"
+      ></textarea>
+    </div>
+    <div>
+      <button
+        type="submit"
+        class="w-full bg-[#0a1f58] text-white py-3 rounded-xl 
+               font-semibold text-lg hover:bg-blue-900 
+               transition duration-300 shadow-md"
+      >
+        Send Message
+      </button>
+    </div>
+  </form>
+</div>
+
+    </section>
+    
+    <!--FOOTER-->
+    <footer class="bg-[var(--secondary)] pb-10">
+      <!-- <hr class="border-0 h-1 opacity-20% mb-5 bg-gray-600" /> -->
+      <div class="flex py-5">
+        <div class="w-1/3 px-10">
+          <img src="logo white.png" alt="logo" class="h-15 w-50" />
+          <p class="text-white pt-3">
+            Trusted by thousands of riders in Bengaluru.
+          </p>
+          <p class="text-white">
+            The safest way to buy and sell used two-wheelers.
+          </p>
+        </div>
+        <div class="text-white w-1/3 pl-30">
+          <p class="text-xl pb-3 pl-15">Quick Links</p>
+          <ul class="pl-15">
+            <li class="pb-2"><a href="" class="">Buy Used Bikes</a></li>
+            <li class="pb-2"><a href="">Sell Your Bike</a></li>
+            <li class="pb-2"><a href="">About us</a></li>
+          </ul>
+        </div>
+        <div class="text-white">
+          <p class="text-xl pb-3 pl-15">Contact Us</p>
+          <p class="pl-15">Jalhalli, Bengaluru, KA 560038</p>
+          <a href="" class="pl-15 pt-3">support@reride.com</a>
+          <p class="flex items-center pl-15 justify-between w-40 pt-4">
+            <i data-lucide="facebook"></i><i data-lucide="instagram"></i
+            ><i data-lucide="twitter"></i>
+          </p>
+        </div>
+      </div>
+      <hr class="border-0 h-1 opacity-20% mb-5 mt-5 bg-gray-600" />
+      <p class="text-white text-center pt-3">
+        © 2026 ReRide Bikes. design and developed by thincnext
+      </p>
+    </footer>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

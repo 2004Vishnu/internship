@@ -17,13 +17,19 @@
   --primary: #f9efec;;
   --secondary: #0a1f58;
 }
-body{
+ body{
   background-color:#f9efec;
-}
+} 
 
     .swiper {
       width: 100%;
       height: 100%;
+    }
+
+    .swiper1 {
+      width: 70%;
+      height: 100%;
+      overflow:hidden;
     }
 
     .swiper-slide {
@@ -41,3 +47,10 @@ body{
       height: 100%;
       object-fit: cover;
     } */
+
+    /* .Testswiper{
+      width:100%;
+      height:100%;
+    } */
+
+    
