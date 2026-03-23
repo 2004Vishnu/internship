@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     pagination: {
       el: ".swiper1-pagination",
       clickable: true,
-       clickable: true,
   dynamicBullets: true,
     },
     autoplay: {
