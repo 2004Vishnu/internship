@@ -16,18 +16,12 @@
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     <img src="Reride_Logo.png" class="h-10">
     <ul class="hidden md:flex gap-8 font-medium text-[#0a1f58]">
-      <li><a href="Home.html" class="hover:text-blue-600">Home</a></li>
+      <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
       <li><a href="Buy.html" class="hover:text-blue-600">Buy</a></li>
-      <li><a href="sell.html" class="hover:text-blue-600">Sell</a></li>
+      <li><a href="sell.html" class="border-b-4 hover:text-blue-600">Sell</a></li>
       <li><a href="about.html" class="hover:text-blue-600">About</a></li>
       <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
-      <li>
-            <a
-              href="Buy.html"
-              class="flex items-center justify-center text-white bg-[#0a1f58] rounded-lg pl-2 pr-4"
-              ><i data-lucide="tag" class="h-7 w-7 px-2"></i>Buy Bike</a
-            >
-          </li>
+      
     </ul>
   </div>
 </nav>
@@ -42,8 +36,8 @@
     <section id="sellBanner" class="relative overflow-hidden bg-[#f9efec] py-20 px-6">
   <div class="absolute top-100 right-0 w-72 h-72 rounded-bl-full bg-[#0a1f58] opacity-5"></div>
   <div class="absolute bottom-0 left-0 w-48 h-48 rounded-tr-full bg-[#0a1f58] opacity-5"></div>
-  <div class="absolute inset-0 -z-10 pointer-events-none opacity-10"
-    style="background-image: radial-gradient(#0a1f58 1px, transparent 1px); background-size: 20px 20px;"></div>
+  <div class="absolute inset-0  pointer-events-none opacity-10"
+    style="background-image: radial-gradient(#0a1f58 4px, transparent 1px); background-size: 20px 20px;"></div>
 
   <div class="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-14">
 
@@ -207,7 +201,7 @@
               type="number"
               class="w-full border-2 border-gray-200 py-3 px-4 rounded-xl focus:outline-none focus:border-[var(--secondary)]" required
             />
-            <button onclick="savePurchaseDetails()" class="mt-8 w-full bg-[var(--secondary)] text-white py-3 rounded-xl font-semibold text-lg hover:opacity-90 transition-all">
+            <button id="purchaseBtn" onclick="savePurchaseDetails()" class="mt-8 w-full bg-[var(--secondary)] text-white py-3 rounded-xl font-semibold text-lg hover:opacity-90 transition-all" disabled>
               Continue
             </button>
           </div>
@@ -353,7 +347,7 @@
               </div>
             </div>
 
-            <button onclick="saveRegistrationDetails()" class="mt-8 w-full bg-[var(--secondary)] text-white py-3 rounded-xl font-semibold text-lg hover:opacity-90 transition-all">
+            <button onclick="saveRegistrationDetails()" id="regBtn" class="mt-8 w-full bg-[var(--secondary)] text-white py-3 rounded-xl font-semibold text-lg hover:opacity-90 transition-all" disabled>
               Continue
             </button>
           </div>
@@ -428,7 +422,7 @@
       
       <hr class="border-0 h-px opacity-20 mb-5 bg-gray-600" />
       <div class="flex py-5">
-        <div class="w-1/3 px-10">
+        <div class="w-1/3 pl-30">
           <img src="logo white.png" alt="logo" class="h-15 w-50" />
           <p class="text-white pt-3">Trusted by thousands of riders in Bengaluru.</p>
           <p class="text-white">The safest way to buy and sell used two-wheelers.</p>
@@ -436,17 +430,19 @@
         <div class="text-white w-1/3 pl-30">
           <p class="text-xl pb-3 pl-15">Quick Links</p>
           <ul class="pl-15">
-            <li class="pb-2"><a href="">Buy Used Bikes</a></li>
-            <li class="pb-2"><a href="">Sell Your Bike</a></li>
-            <li class="pb-2"><a href="">About us</a></li>
+            <li class="pb-2"><a href="Buy.html">Buy Used Bikes</a></li>
+            <li class="pb-2"><a href="sell.html">Sell Your Bike</a></li>
+            <li class="pb-2"><a href="about.html">About us</a></li>
           </ul>
         </div>
         <div class="text-white">
           <p class="text-xl pb-3 pl-15">Contact Us</p>
           <p class="pl-15">Jalhalli, Bengaluru, KA 560038</p>
-          <a href="" class="pl-15 pt-3"><span class="__cf_email__" data-cfemail="f5868085859a8781b58790879c9190db969a98">[email&#160;protected]</span></a>
+          <a href="" class="pl-15 pt-3">support@reride.com</a>
           <p class="flex items-center pl-15 justify-between w-40 pt-4">
-            <i data-lucide="facebook"></i><i data-lucide="instagram"></i><i data-lucide="twitter"></i>
+            <a href="https://www.facebook.com/" ><i data-lucide="facebook"></i></a>
+            <a href="https://www.instagram.com/?hl=en" ><i data-lucide="instagram"></i></a>
+            <a href="https://x.com/" ><i data-lucide="twitter"></i></a>
           </p>
         </div>
       </div>

@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const restorations = {
-      1: () => restoreOptionSelection("brandGrid",       "brand"),
+      1: () => restoreOptionSelection("brandGrid",  "brand"),
       3: () => { const b = localStorage.getItem("brand"); if (b) loadModelsForBrand(b); },
       4: () => restoreOptionSelection("yearContainer",   "model_year"),
       5: () => restoreOptionSelection("colourContainer", "colour"),
@@ -363,6 +363,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (removeBtn) removeBtn.classList.add("hidden");
     }
 
+    checkStep8Fields();
+    checkPurchaseFields();
+
     
     document.querySelectorAll(".option").forEach(o => o.classList.remove("option-selected"));
 
@@ -396,7 +399,48 @@ document.addEventListener("DOMContentLoaded", () => {
   wizard.classList.add("hidden");
   const savedStep = localStorage.getItem("sellStep");
   if (savedStep) currentStep = parseInt(savedStep);
-});
+
+// ── PURCHASE DETAILS: enable/disable Continue button ──
+  const purchaseDateEl   = document.getElementById("purchaseDate");
+  const purchaseAmountEl = document.getElementById("purchaseAmount");
+  const purchaseBtn      = document.getElementById("purchaseBtn");
+
+  function checkPurchaseFields() {
+    if (!purchaseDateEl || !purchaseAmountEl || !purchaseBtn) return;
+    const filled = purchaseDateEl.value && purchaseAmountEl.value;
+    purchaseBtn.disabled = !filled;
+    purchaseBtn.classList.toggle("opacity-40",         !filled);
+    purchaseBtn.classList.toggle("cursor-not-allowed", !filled);
+  }
+
+  if (purchaseDateEl) purchaseDateEl.addEventListener("input", checkPurchaseFields);
+  if (purchaseAmountEl) purchaseAmountEl.addEventListener("input", checkPurchaseFields);
+  checkPurchaseFields();
+
+  const regNumberEl = document.getElementById("regNumber");
+  const regBtn      = document.getElementById("regBtn");
+
+  window.checkStep8Fields = function() {
+  const regNumberEl = document.getElementById("regNumber");
+  const regBtn      = document.getElementById("regBtn");
+  if (!regNumberEl || !regBtn) return;
+
+  const regFilled = regNumberEl.value.trim().length > 0;
+  let photoCount = 0;
+  for (let i = 1; i <= 5; i++) {
+    const img = document.getElementById("slot-img-" + i);
+    if (img && !img.classList.contains("hidden") && img.src) photoCount++;
+  }
+
+  const allGood = regFilled && photoCount >= 5;
+  regBtn.disabled = !allGood;
+  regBtn.classList.toggle("opacity-40",         !allGood);
+  regBtn.classList.toggle("cursor-not-allowed", !allGood);
+}
+
+if (regNumberEl) regNumberEl.addEventListener("input", checkStep8Fields);
+checkStep8Fields();
+}); 
 
 // ── PHOTO UPLOAD HANDLERS ──
 function handleSlotUpload(event, slotNumber) {
@@ -411,6 +455,7 @@ function handleSlotUpload(event, slotNumber) {
     img.classList.remove("hidden");
     if (empty)     empty.classList.add("hidden");
     if (removeBtn) removeBtn.classList.remove("hidden");
+    checkStep8Fields();
   };
   reader.readAsDataURL(file);
 }
@@ -426,14 +471,14 @@ function clearSlot(event, slotNumber) {
   if (input)     input.value = "";
   if (empty)     empty.classList.remove("hidden");
   if (removeBtn) removeBtn.classList.add("hidden");
+  checkStep8Fields();
 }
 
 function savePurchaseDetails() {
   if (window._btnProcessing) return;
+  window._btnProcessing = true;
   const date   = document.getElementById("purchaseDate").value;
   const amount = document.getElementById("purchaseAmount").value;
-  if (!date || !amount) { alert("Please fill in both fields."); return; }
-  window._btnProcessing = true;
   localStorage.setItem("purchase_date",   date);
   localStorage.setItem("purchase_amount", amount);
   document.dispatchEvent(new CustomEvent("wizardNext"));
@@ -442,9 +487,8 @@ function savePurchaseDetails() {
 
 function saveRegistrationDetails() {
   if (window._btnProcessing) return;
-  const reg = document.getElementById("regNumber").value.trim();
-  if (!reg) { alert("Please enter a registration number."); return; }
   window._btnProcessing = true;
+  const reg = document.getElementById("regNumber").value.trim();
   localStorage.setItem("reg_number", reg);
   document.dispatchEvent(new CustomEvent("wizardNext"));
   setTimeout(() => { window._btnProcessing = false; }, 500);
