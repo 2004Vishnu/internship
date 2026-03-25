@@ -1,0 +1,19 @@
+
+.logo{
+    width: 50px;
+    font-size: 50px;
+    padding: 15px;
+}
+
+
+.box{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    background-color: blueviolet;
+    margin: 30px 20px;
+    padding: 15px 15px
+}
+

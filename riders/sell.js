@@ -24,6 +24,7 @@ const BRAND_ABBR = {
   "Vespa":         "VESPA",
 };
 
+
 const CURRENT_YEAR = new Date().getFullYear();
 const START_YEAR   = 2006;
 const totalSteps   = 10;
