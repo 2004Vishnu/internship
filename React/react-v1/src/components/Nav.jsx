@@ -1,15 +1,16 @@
 import './nav.css'
+import { Link } from 'react-router'
 function Nav(){
     return(
         
             <nav className='nav'>
                 <div className='logo'>Riders</div>
                 <ul className='l'>
-                    <li><a href="#" >Home</a></li>
-                    <li><a href="#" >About</a></li>
-                    <li><a href="#" >Services</a></li>
-                    <li><a href="#" >Career</a></li>
-                    <li><a href="#" >Contact Us</a></li>
+                    <li><Link to="/" >Home</Link></li>
+                    <li><Link to="/service" >services</Link></li>
+                    <li><Link to="/about" >About us</Link></li>
+                    <li><Link to="/contact" >Contact us</Link></li>
+                    <li><Link to="/product" >products</Link></li>
                 </ul>
             </nav>
     

@@ -1,0 +1,60 @@
+.p1{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.prodcard{
+    background-color: papayawhip;
+    margin:20px;
+    width:220px;
+    display:flex;
+    flex-direction:column;
+    padding:10px;
+    border-radius:10px;
+}
+
+img{
+    height:200px;
+    width:100%;
+    object-fit:cover;
+}
+
+.amt{
+    font-weight:bold;
+    display:flex;
+    justify-content:space-between;   /* price left, star right */
+    align-items:center;
+    width:100%;
+}
+
+.star{
+    border:2px solid green;
+    padding:3px 8px;
+    border-radius:10px;
+    background-color:greenyellow;
+}
+
+.btn{
+    display:flex;
+    justify-content:space-between;   /* buttons at both ends */
+    width:100%;
+    margin-top:10px;
+}
+
+.btn button{
+    border-radius:10px;
+    padding:6px 10px;
+    border:none;
+    cursor:pointer;
+}
+
+.cart{
+    background-color:blue;
+    color:white;
+}
+
+.buy{
+    background-color:yellow;
+}
