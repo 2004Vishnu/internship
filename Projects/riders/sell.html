@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell - ReRide</title>
+    <link rel="stylesheet" href="Home.css" />
+    <link rel="stylesheet" href="sell.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+
+    <!--navbar-->
+   <nav class="bg-[#f9efec] shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <img src="images/Reride_Logo.png" class="h-10">
+    <ul class="hidden md:flex gap-8 font-medium text-[#0a1f58]">
+      <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+      <li><a href="Buy.html" class="hover:text-blue-600">Buy</a></li>
+      <li><a href="sell.html" class="border-b-4 hover:text-blue-600">Sell</a></li>
+      <li><a href="about.html" class="hover:text-blue-600">About</a></li>
+      <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
+    <!--BANNER-->
+    <!-- <section id="sellBanner" class="bg-white text-center py-20">
+      <h1 class="text-4xl font-bold mb-4">Sell Your Bike Easily</h1>
+      <p class="text-lg mb-8">Get best price in minutes. Simple & Secure process.</p>
+      <button id="startSellBtn" class="bg-[var(--secondary)] text-white px-8 py-3 rounded-xl font-bold">
+        Sell Your Bike
+      </button>-->
+    <section id="sellBanner" class="relative overflow-hidden bg-[#f9efec] py-20 px-6">
+  <div class="absolute top-100 right-0 w-72 h-72 rounded-bl-full bg-[#0a1f58] opacity-5"></div>
+  <div class="absolute bottom-0 left-0 w-48 h-48 rounded-tr-full bg-[#0a1f58] opacity-5"></div>
+  <div class="absolute inset-0  pointer-events-none opacity-10"
+    style="background-image: radial-gradient(#0a1f58 4px, transparent 1px); background-size: 20px 20px;"></div>
+
+  <div class="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-14">
+
+  
+    <div class="flex-1 mt-10">
+      <span class="inline-flex items-center gap-2 bg-[#0a1f58] text-[#f9efec] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#f9efec] inline-block"></span>
+        Free Inspection · Best Price Guaranteed
+      </span>
+      <h1 class="text-5xl font-extrabold text-[#0a1f58] leading-tight mb-4">
+        Sell Your Bike<br/>
+        <span class="relative inline-block">
+          the Smart Way.
+          
+          <span class="absolute -bottom-1 left-0 w-full h-1 rounded-full bg-[#0a1f58] opacity-20"></span>
+        </span>
+      </h1>
+      <p class="text-[#0a1f58] opacity-60 text-lg mb-8 max-w-md leading-relaxed">
+        Hassle-free selling with instant valuation, free doorstep inspection, and same-week payment.
+      </p>
+      <div class="flex flex-wrap items-center gap-4 mb-10">
+        <button id="startSellBtn"
+          class="bg-[#0a1f58] text-white px-8 py-3.5 rounded-xl font-bold text-base hover:opacity-90 transition-all shadow-md">
+          Start Selling →
+        </button>
+        <div class="flex items-center gap-2 text-[#0a1f58] opacity-50 text-sm">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+          Secure · No hidden fees
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 shrink-0">
+      <div class="bg-white rounded-2xl px-6 py-5 text-center shadow-sm border border-black border-opacity-5 col-span-2">
+        <p class="text-4xl font-extrabold text-[#0a1f58]">5,000+</p>
+        <p class="text-sm text-gray-400 mt-1 font-medium">Bikes Sold in Bengaluru</p>
+      </div>
+      <div class="bg-white rounded-2xl px-5 py-5 text-center shadow-sm border border-black border-opacity-5">
+        <p class="text-2xl font-extrabold text-[#0a1f58]">48 hrs</p>
+        <p class="text-xs text-gray-400 mt-1">Avg. Sell Time</p>
+      </div>
+      <div class="bg-white rounded-2xl px-5 py-5 text-center shadow-sm border border-black border-opacity-5">
+        <p class="text-2xl font-extrabold text-[#0a1f58]">98%</p>
+        <p class="text-xs text-gray-400 mt-1">Satisfaction Rate</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!--SELL WIZARD-->
+    <div id="sellWizard" class="hidden min-h-screen bg-[#f5f7fb] py-6 px-4">
+
+      <!-- STEP COUNTER -->
+      <div class="max-w-5xl mx-auto">
+
+    
+        <div class="flex justify-end mb-2">
+          <p class="text-sm text-gray-500 font-medium"><span id="stepNumber">1</span>/10</p>
+        </div>
+
+        <!-- STEP BUTTONS CARD -->
+        <div class="bg-white rounded-2xl shadow-sm p-5 mb-6">
+          <div class="flex items-start gap-2 flex-wrap">
+            <button id="backBtn" class="hidden text-gray-500 hover:text-gray-800 mr-2 mt-1 text-xl font-bold">←</button>
+            <button class="step-btn text-sm font-semibold rounded-full px-4 py-2 border transition-all">Brand</button>
+            <button class="step-btn text-sm font-semibold rounded-full px-4 py-2 border transition-all">Vehicle Type</button>
+            <button class="step-btn text-sm font-semibold rounded-full px-4 py-2 border transition-all">Model</button>
+            <button class="step-btn text-sm font-semibold rounded-full px-4 py-2 border transition-all">Model Year</button>
+            <button class="step-btn text-sm font-semibold rounded-full px-4 py-2 border transition-all">Colour</button>
+            <button class="step-btn text-sm font-semibold rounded-full px-4 py-2 border transition-all">Purchase Details</button>
+            <button class="step-btn text-sm font-semibold rounded-full px-4 py-2 border transition-all">Owner</button>
+            <button class="step-btn text-sm font-semibold rounded-full px-4 py-2 border transition-all">Photos &amp; Registration</button>
+            <button class="step-btn text-sm font-semibold rounded-full px-4 py-2 border transition-all ml-8">Inspection</button>
+            <button class="step-btn text-sm font-semibold rounded-full px-4 py-2 border transition-all">Contact</button>
+          </div>
+        </div>
+
+        <!-- STEP CONTENT CARD -->
+        <div class="bg-white rounded-2xl shadow-sm p-8">
+
+          <!--STEP 1: BRAND-->
+          <div id="step-1">
+            <p class="text-3xl font-bold pb-8">
+              Select the <span class="text-[var(--secondary)]">Brand</span> of your two-wheeler
+            </p>
+            <div id="brandGrid" class="grid grid-cols-4 gap-4">
+              
+            </div>
+          </div>
+
+          <!--STEP 2: VEHICLE TYPE-->
+          <div id="step-2" class="hidden">
+            <p class="text-3xl font-bold pb-8">
+              Select the <span class="text-[var(--secondary)]">Type</span> of your two-wheeler
+            </p>
+            <div id="typeContainer" class="flex gap-6">
+              <div class="option flex flex-col items-center justify-center w-1/2 border-2 border-gray-200 rounded-2xl py-10 cursor-pointer hover:border-[var(--secondary)] transition-all" data-value="Bike">
+                <div class="iconbox bg-gray-100 rounded-xl p-4 mb-4">
+                  <i data-lucide="motorbike" class="h-10 w-10 text-gray-500"></i>
+                </div>
+                <p class="text-xl font-semibold text-gray-700">Bike</p>
+              </div>
+              <div class="option flex flex-col items-center justify-center w-1/2 border-2 border-gray-200 rounded-2xl py-10 cursor-pointer hover:border-[var(--secondary)] transition-all" data-value="Scooter">
+                <div class="iconbox bg-gray-100 rounded-xl p-4 mb-4">
+                  <i data-lucide="bike" class="h-10 w-10 text-gray-500"></i>
+                </div>
+                <p class="text-xl font-semibold text-gray-700">Scooter</p>
+              </div>
+            </div>
+          </div>
+
+          <!--STEP 3: MODEL-->
+         <div id="step-3" class="hidden">
+            <p class="text-3xl font-bold pb-4">
+              Select the <span class="text-[var(--secondary)]">Model</span> of your two-wheeler
+            </p>
+            <p id="selectedBrandLabel" class="text-sm text-gray-400 mb-6"></p>
+            <select
+              id="modelDropdown"
+              class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-700 focus:outline-none focus:border-[var(--secondary)] bg-white"
+            >
+              <option value="">-- Select a Model --</option>
+            </select>
+          </div>
+
+          <!--STEP 4: MODEL YEAR-->
+          <div id="step-4" class="hidden">
+            <p class="text-3xl font-bold pb-8">
+              Select the <span class="text-[var(--secondary)]">Year</span> of your two-wheeler
+            </p>
+            <div id="yearContainer" class="grid grid-cols-7 gap-3">
+              <!-- Years injected by JS -->
+            </div>
+          </div>
+
+          <!--STEP 5: COLOUR-->
+          <div id="step-5" class="hidden">
+            <p class="text-3xl font-bold pb-8">
+              Select the <span class="text-[var(--secondary)]">Colour</span> of your two-wheeler
+            </p>
+            <div id="colourContainer" class="space-y-3">
+            
+            </div>
+          </div>
+
+          <!--STEP 6: PURCHASE DETAILS-->
+          <div id="step-6" class="hidden">
+            <p class="text-3xl font-bold pb-8">Enter Purchase Details</p>
+            <label class="block text-gray-700 font-medium mb-2">Purchase Date:</label>
+            <input
+              id="purchaseDate"
+              type="date"
+              class="w-full border-2 border-gray-200 py-3 px-4 rounded-xl mb-6 focus:outline-none focus:border-[var(--secondary)]" required
+            />
+            <label class="block text-gray-700 font-medium mb-2">Purchase Amount (₹):</label>
+            <input
+              id="purchaseAmount"
+              type="number"
+              class="w-full border-2 border-gray-200 py-3 px-4 rounded-xl focus:outline-none focus:border-[var(--secondary)]" required
+            />
+            <button id="purchaseBtn" onclick="savePurchaseDetails()" class="mt-8 w-full bg-[var(--secondary)] text-white py-3 rounded-xl font-semibold text-lg hover:opacity-90 transition-all" disabled>
+              Continue
+            </button>
+          </div>
+
+          <!--STEP 7: OWNER-->
+          <div id="step-7" class="hidden">
+            <p class="text-3xl font-bold pb-8">
+              Select <span class="text-[var(--secondary)]">Owner</span> type
+            </p>
+            <div id="ownerContainer" class="flex gap-4">
+              <div class="option flex flex-col items-center justify-center w-1/4 border-2 border-gray-200 py-8 rounded-2xl cursor-pointer hover:border-[var(--secondary)] transition-all" data-value="1st Owner">
+                <span class="bg-blue-100 text-[var(--secondary)] font-bold px-4 py-2 rounded-lg mb-4 text-lg">1st</span>
+                <p class="text-lg font-medium">1st Owner</p>
+              </div>
+              <div class="option flex flex-col items-center justify-center w-1/4 border-2 border-gray-200 py-8 rounded-2xl cursor-pointer hover:border-[var(--secondary)] transition-all" data-value="2nd Owner">
+                <span class="bg-blue-100 text-[var(--secondary)] font-bold px-4 py-2 rounded-lg mb-4 text-lg">2nd</span>
+                <p class="text-lg font-medium">2nd Owner</p>
+              </div>
+              <div class="option flex flex-col items-center justify-center w-1/4 border-2 border-gray-200 py-8 rounded-2xl cursor-pointer hover:border-[var(--secondary)] transition-all" data-value="3rd Owner">
+                <span class="bg-blue-100 text-[var(--secondary)] font-bold px-4 py-2 rounded-lg mb-4 text-lg">3rd</span>
+                <p class="text-lg font-medium">3rd Owner</p>
+              </div>
+              <div class="option flex flex-col items-center justify-center w-1/4 border-2 border-gray-200 py-8 rounded-2xl cursor-pointer hover:border-[var(--secondary)] transition-all" data-value="4+ Owner">
+                <span class="bg-blue-100 text-[var(--secondary)] font-bold px-4 py-2 rounded-lg mb-4 text-lg">4+</span>
+                <p class="text-lg font-medium">4+ Owner</p>
+              </div>
+            </div>
+          </div>
+
+          <!--STEP 8: PHOTOS & REGISTRATION-->
+<div id="step-8" class="hidden">
+            <p class="text-3xl font-bold pb-8">Vehicle Registration &amp; Photos</p>
+            <label class="block text-gray-700 font-medium mb-2">Enter Vehicle Registration Number</label>
+            <input
+              id="regNumber"
+              type="text"
+              placeholder="eg: KA 01 AB 1234"
+              class="w-full border-2 border-gray-200 py-3 px-4 rounded-xl mb-8 focus:outline-none focus:border-[var(--secondary)]"
+            />
+
+            <p class="text-gray-700 font-medium mb-4">Upload Vehicle Photos</p>
+
+            <div class="grid grid-cols-5 gap-4">
+
+              <!-- Slot 1 - Front View -->
+              <div class="flex flex-col gap-2">
+                <input type="file" id="photo-1" accept="image/*" class="hidden" onchange="handleSlotUpload(event, 1)" />
+                
+                <div id="slot-preview-1" class="w-full h-40 rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 overflow-hidden flex items-center justify-center">
+                  <img id="slot-img-1" class="w-full h-full object-cover hidden" />
+                  <span id="slot-empty-1" class="text-gray-300 text-sm">No photo</span>
+                </div>
+              
+                <button type="button" onclick="document.getElementById('photo-1').click()"
+                  class="w-full flex items-center justify-center gap-2 border-2 border-[var(--secondary)] text-[var(--secondary)] rounded-xl py-2 font-semibold text-sm hover:bg-[var(--secondary)] hover:text-white transition-all">
+                  <i data-lucide="upload" class="h-4 w-4"></i> Front View
+                </button>
+                
+                <button type="button" id="slot-remove-1" onclick="clearSlot(event,1)"
+                  class="hidden w-full text-center text-xs text-red-400 hover:text-red-600 transition-all">
+                  ✕ Remove
+                </button>
+              </div>
+
+              <!-- Slot 2 - Back View -->
+              <div class="flex flex-col gap-2">
+                <input type="file" id="photo-2" accept="image/*" class="hidden" onchange="handleSlotUpload(event, 2)" />
+              
+                <div id="slot-preview-2" class="w-full h-40 rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 overflow-hidden flex items-center justify-center">
+                  <img id="slot-img-2" class="w-full h-full object-cover hidden" />
+                  <span id="slot-empty-2" class="text-gray-300 text-sm">No photo</span>
+                </div>
+                
+                <button type="button" onclick="document.getElementById('photo-2').click()"
+                  class="w-full flex items-center justify-center gap-2 border-2 border-[var(--secondary)] text-[var(--secondary)] rounded-xl py-2 font-semibold text-sm hover:bg-[var(--secondary)] hover:text-white transition-all">
+                  <i data-lucide="upload" class="h-4 w-4"></i> Back View
+                </button>
+            
+                <button type="button" id="slot-remove-2" onclick="clearSlot(event,2)"
+                  class="hidden w-full text-center text-xs text-red-400 hover:text-red-600 transition-all">
+                  ✕ Remove
+                </button>
+              </div>
+
+              <!-- Slot 3 - Right Side -->
+              <div class="flex flex-col gap-2">
+                <input type="file" id="photo-3" accept="image/*" class="hidden" onchange="handleSlotUpload(event, 3)" />
+            
+                <div id="slot-preview-3" class="w-full h-40 rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 overflow-hidden flex items-center justify-center">
+                  <img id="slot-img-3" class="w-full h-full object-cover hidden" />
+                  <span id="slot-empty-3" class="text-gray-300 text-sm">No photo</span>
+                </div>
+                
+                <button type="button" onclick="document.getElementById('photo-3').click()"
+                  class="w-full flex items-center justify-center gap-2 border-2 border-[var(--secondary)] text-[var(--secondary)] rounded-xl py-2 font-semibold text-sm hover:bg-[var(--secondary)] hover:text-white transition-all">
+                  <i data-lucide="upload" class="h-4 w-4"></i> Right Side
+                </button>
+                
+                <button type="button" id="slot-remove-3" onclick="clearSlot(event,3)"
+                  class="hidden w-full text-center text-xs text-red-400 hover:text-red-600 transition-all">
+                  ✕ Remove
+                </button>
+              </div>
+
+            
+              <div class="flex flex-col gap-2">
+                <input type="file" id="photo-4" accept="image/*" class="hidden" onchange="handleSlotUpload(event, 4)" />
+            
+                <div id="slot-preview-4" class="w-full h-40 rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 overflow-hidden flex items-center justify-center">
+                  <img id="slot-img-4" class="w-full h-full object-cover hidden" />
+                  <span id="slot-empty-4" class="text-gray-300 text-sm">No photo</span>
+                </div>
+            
+                <button type="button" onclick="document.getElementById('photo-4').click()"
+                  class="w-full flex items-center justify-center gap-2 border-2 border-[var(--secondary)] text-[var(--secondary)] rounded-xl py-2 font-semibold text-sm hover:bg-[var(--secondary)] hover:text-white transition-all">
+                  <i data-lucide="upload" class="h-4 w-4"></i> Left Side
+                </button>
+              
+                <button type="button" id="slot-remove-4" onclick="clearSlot(event,4)"
+                  class="hidden w-full text-center text-xs text-red-400 hover:text-red-600 transition-all">
+                  ✕ Remove
+                </button>
+              </div>
+
+        
+              <div class="flex flex-col gap-2">
+                <input type="file" id="photo-5" accept="image/*" class="hidden" onchange="handleSlotUpload(event, 5)" />
+              
+                <div id="slot-preview-5" class="w-full h-40 rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 overflow-hidden flex items-center justify-center">
+                  <img id="slot-img-5" class="w-full h-full object-cover hidden" />
+                  <span id="slot-empty-5" class="text-gray-300 text-sm">No photo</span>
+                </div>
+                
+                <button type="button" onclick="document.getElementById('photo-5').click()"
+                  class="w-full flex items-center justify-center gap-2 border-2 border-[var(--secondary)] text-[var(--secondary)] rounded-xl py-2 font-semibold text-sm hover:bg-[var(--secondary)] hover:text-white transition-all">
+                  <i data-lucide="upload" class="h-4 w-4"></i> Dashboard / Odometer
+                </button>
+              
+                <button type="button" id="slot-remove-5" onclick="clearSlot(event,5)"
+                  class="hidden w-full text-center text-xs text-red-400 hover:text-red-600 transition-all">
+                  ✕ Remove
+                </button>
+              </div>
+            </div>
+
+            <button onclick="saveRegistrationDetails()" id="regBtn" class="mt-8 w-full bg-[var(--secondary)] text-white py-3 rounded-xl font-semibold text-lg hover:opacity-90 transition-all" disabled>
+              Continue
+            </button>
+          </div>
+
+          <!--STEP 9: INSPECTION-->
+          <div id="step-9" class="hidden">
+            <p class="text-3xl font-bold pb-8">Inspection Details</p>
+            <label class="block text-gray-700 font-medium mb-2">Inspection Date</label>
+            <input
+              id="inspectionDate"
+              type="date"
+              class="w-full border-2 border-gray-200 py-3 px-4 rounded-xl mb-6 focus:outline-none focus:border-[var(--secondary)]"
+            />
+            <label class="block text-gray-700 font-medium mb-2">Inspection Branch</label>
+            <select
+              id="inspectionBranch"
+              class="w-full border-2 border-gray-200 py-3 px-4 rounded-xl focus:outline-none focus:border-[var(--secondary)]"
+            >
+              <option value="">- select Location -</option>
+              <option value="Jalhalli">Jalhalli, Bengaluru</option>
+              <option value="Koramangala">Koramangala, Bengaluru</option>
+              <option value="Whitefield">Whitefield, Bengaluru</option>
+              <option value="Jayanagar">Jayanagar, Bengaluru</option>
+            </select>
+            <button onclick="saveInspectionDetails()" class="mt-8 w-full bg-[var(--secondary)] text-white py-3 rounded-xl font-semibold text-lg hover:opacity-90 transition-all">
+              Continue
+            </button>
+          </div>
+
+          <!--STEP 10: CONTACT-->
+          <div id="step-10" class="hidden">
+            <p class="text-3xl font-bold pb-8">
+              Contact <span class="text-[var(--secondary)]">Information</span>
+            </p>
+            <div class="max-w-lg mx-auto">
+              <label class="block text-gray-700 font-medium mb-2">Full Name</label>
+              <input
+                id="contactName"
+                type="text"
+                placeholder="Enter your name"
+                class="w-full border-2 border-gray-200 py-3 px-4 rounded-xl mb-5 focus:outline-none focus:border-[var(--secondary)]"
+                required
+              />
+              <label class="block text-gray-700 font-medium mb-2">Mobile Number</label>
+              <input
+                id="contactPhone"
+                type="tel"
+                placeholder="Enter your 10 digit mobile number"
+                maxlength="10"
+                class="w-full border-2 border-gray-200 py-3 px-4 rounded-xl mb-5 focus:outline-none focus:border-[var(--secondary)]"
+                required
+              />
+              <label class="block text-gray-700 font-medium mb-2">Email Address</label>
+              <input
+                id="contactEmail"
+                type="email"
+                class="w-full border-2 border-gray-200 py-3 px-4 rounded-xl mb-6 focus:outline-none focus:border-[var(--secondary)]"
+                required
+              />
+              <button onclick="submitForm()" class="w-full bg-[var(--secondary)] text-white py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-all">
+                Submit Vehicle Details
+              </button>
+            </div>
+          </div>
+
+        </div><!-- end step content card -->
+      </div><!-- end max-w container -->
+    </div><!-- end sellWizard -->
+
+    <!--FOOTER-->
+    <footer class="bg-[var(--secondary)] pb-10">
+      
+      <hr class="border-0 h-px opacity-20 mb-5 bg-gray-600" />
+      <div class="flex py-5">
+        <div class="w-1/3 pl-30">
+          <img src="images/logo white.png" alt="logo" class="h-15 w-50" />
+          <p class="text-white pt-3">Trusted by thousands of riders in Bengaluru.</p>
+          <p class="text-white">The safest way to buy and sell used two-wheelers.</p>
+        </div>
+        <div class="text-white w-1/3 pl-30">
+          <p class="text-xl pb-3 pl-15">Quick Links</p>
+          <ul class="pl-15">
+            <li class="pb-2"><a href="Buy.html">Buy Used Bikes</a></li>
+            <li class="pb-2"><a href="sell.html">Sell Your Bike</a></li>
+            <li class="pb-2"><a href="about.html">About us</a></li>
+          </ul>
+        </div>
+        <div class="text-white">
+          <p class="text-xl pb-3 pl-15">Contact Us</p>
+          <p class="pl-15">Jalhalli, Bengaluru, KA 560038</p>
+          <a href="" class="pl-15 pt-3">support@reride.com</a>
+          <p class="flex items-center pl-15 justify-between w-40 pt-4">
+            <a href="https://www.facebook.com/" ><i data-lucide="facebook"></i></a>
+            <a href="https://www.instagram.com/?hl=en" ><i data-lucide="instagram"></i></a>
+            <a href="https://x.com/" ><i data-lucide="twitter"></i></a>
+          </p>
+        </div>
+      </div>
+      <hr class="border-0 h-px opacity-20 mb-5 mt-5 bg-gray-600" />
+      <p class="text-white text-center pt-3">© 2026 ReRide Bikes. design and developed by thincnext</p>
+    </footer>
+
+    
+    </footer>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="sell.js"></script>
+  </body>
+</html>

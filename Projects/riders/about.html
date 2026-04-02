@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="Home.js"></script>
+  </head>
+  <body>
+    <nav class="bg-[#f9efec] shadow-md">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <img src="images/Reride_Logo.png" class="h-10" />
+        <ul class="hidden md:flex gap-8 font-medium text-[#0a1f58]">
+          <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+          <li><a href="Buy.html" class="hover:text-blue-600">Buy</a></li>
+          <li><a href="sell.html" class="hover:text-blue-600">Sell</a></li>
+          <li><a href="about.html" class="hover:text-blue-600 border-b-4">About</a></li>
+          <li>
+            <a href="contact.html" class="hover:text-blue-600">Contact</a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+    <section
+      class="bg-[#0a1f58] py-20 px-6 text-white text-center relative overflow-hidden"
+    >
+      <div
+        class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-white opacity-[0.03] pointer-events-none"
+      ></div>
+      <div
+        class="absolute -bottom-16 -left-12 w-64 h-64 rounded-full bg-white opacity-[0.03] pointer-events-none"
+      ></div>
+      <p
+        class="text-lg font-bold tracking-[0.2em] uppercase text-white/50 mb-4"
+      >
+        About ReRide
+      </p>
+      <h1
+        class="text-4xl md:text-5xl font-extrabold max-w-3xl mx-auto leading-tight mb-5"
+      >
+        Building Trust in Every<br />Vehicle Transaction
+      </h1>
+      <p class="text-white/60 text-lg max-w-xl mx-auto leading-relaxed mb-12">
+        A transparent marketplace for buying and selling pre-owned two-wheelers
+        — verified listings, fair pricing, and full ownership support.
+      </p>
+      <div
+        class="flex justify-center gap-10 border-t border-white/10 pt-10 max-w-sm mx-auto"
+      >
+        <div class="text-center">
+          <div class="text-3xl font-extrabold">5K+</div>
+          <div class="text-white/50 text-xs mt-1 uppercase tracking-wider">
+            Bikes Sold
+          </div>
+        </div>
+        <div class="text-center border-x border-white/10 px-10">
+          <div class="text-3xl font-extrabold">98%</div>
+          <div class="text-white/50 text-xs mt-1 uppercase tracking-wider">
+            Satisfaction
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-extrabold">4</div>
+          <div class="text-white/50 text-xs mt-1 uppercase tracking-wider">
+            Branches
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- OUR STORY -->
+      <section class="py-20 grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p
+            class="text-s font-bold tracking-[0.2em] uppercase text-[#0a1f58]/40 mb-3"
+          >
+            Our Story
+          </p>
+          <h2 class="text-3xl font-bold text-[#0a1f58] mb-5">
+            Why We Built ReRide
+          </h2>
+          <p class="text-black/50 leading-relaxed mb-4 text-lg">
+            Buying or selling a second-hand vehicle often involves uncertainty,
+            pricing confusion, and documentation complexity. Many individuals
+            struggled with hidden charges, unverified sellers, and lengthy
+            ownership transfer processes.
+          </p>
+          <p class="text-black/50 leading-relaxed text-lg">
+            That's why we built a platform focused on
+            <strong class="text-[#0a1f58]"
+              >transparency, compliance, and user safety</strong
+            >
+            — combining technology with structured verification to make vehicle
+            resale simple and secure.
+          </p>
+        </div>
+        <!-- Visual side -->
+        <div class="bg-[#f9efec] rounded-3xl p-10 flex flex-col gap-5">
+          <div class="flex items-start gap-4">
+            <div
+              class="w-10 h-10 rounded-xl bg-[#0a1f58] flex items-center justify-center shrink-0 mt-0.5"
+            >
+              <i data-lucide="shield-check" class="h-5 w-5 text-white"></i>
+            </div>
+            <div>
+              <p class="font-bold text-[#0a1f58] text-xl mb-1">Verified Listings</p>
+              <p class="text-lg text-black/50">
+                Every vehicle goes through document validation and identity
+                checks.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div
+              class="w-10 h-10 rounded-xl bg-[#0a1f58] flex items-center justify-center shrink-0 mt-0.5"
+            >
+              <i data-lucide="indian-rupee" class="h-5 w-5 text-white"></i>
+            </div>
+            <div>
+              <p class="font-bold text-[#0a1f58] text-xl mb-1">Fair Pricing</p>
+              <p class="text-lg text-black/50">
+                No hidden charges. Clear, transparent pricing for everyone.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div
+              class="w-10 h-10 rounded-xl bg-[#0a1f58] flex items-center justify-center shrink-0 mt-0.5"
+            >
+              <i data-lucide="file-check" class="h-5 w-5 text-white"></i>
+            </div>
+            <div>
+              <p class="font-bold text-[#0a1f58] text-xl mb-1">RC Transfer Support</p>
+              <p class="text-lg text-black/50">
+                We handle documentation and ownership transfer end-to-end.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DIVIDER -->
+      <hr class="border-black/5" />
+
+      <!-- MISSION & VISION -->
+      <section class="py-20 grid md:grid-cols-2 gap-8">
+        <div>
+          <p
+            class="text-s font-bold tracking-[0.2em] uppercase text-[#0a1f58]/40 mb-3"
+          >
+            What Drives Us
+          </p>
+          <h2 class="text-3xl font-bold text-[#0a1f58] mb-8">
+            Mission & Vision
+          </h2>
+          <div class="space-y-6">
+            <div class="border-l-4 border-[#0a1f58] pl-6">
+              <h3 class="font-bold text-[#0a1f58] mb-2 text-xl">Our Mission</h3>
+              <p class="text-black/50 text-lg leading-relaxed">
+                To provide a transparent and secure marketplace that eliminates
+                uncertainty in second-hand vehicle transactions ensuring fair
+                pricing, verified listings, and seamless ownership transfer.
+              </p>
+            </div>
+            <div class="border-l-4 border-black/10 text-xl pl-6">
+              <h3 class="font-bold text-[#0a1f58] mb-2">Our Vision</h3>
+              <p class="text-black/50 text-lg leading-relaxed">
+                To become the most trusted pre-owned vehicle marketplace by
+                setting high standards in verification, safety, and customer
+                satisfaction across the industry.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Core Values alongside -->
+        <div>
+          <p
+            class="text-s font-bold tracking-[0.2em] uppercase text-[#0a1f58]/40 mb-3"
+          >
+            What We Stand For
+          </p>
+          <h2 class="text-3xl font-bold text-[#0a1f58] mb-8">Core Values</h2>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-[#f9efec] rounded-2xl p-5">
+              <div
+                class="w-10 h-10 rounded-xl bg-[#0a1f58] flex items-center justify-center mb-3"
+              >
+                <i data-lucide="eye" class="h-4 w-4 text-white"></i>
+              </div>
+              <p class="font-bold text-[#0a1f58] text-xl mb-1">Transparency</p>
+              <p class="text-lg text-black/40 leading-relaxed">
+                Clear pricing, no surprises.
+              </p>
+            </div>
+            <div class="bg-[#f9efec] rounded-2xl p-5">
+              <div
+                class="w-10 h-10 rounded-xl bg-[#0a1f58] flex items-center justify-center mb-3"
+              >
+                <i data-lucide="handshake" class="h-4 w-4 text-white"></i>
+              </div>
+              <p class="font-bold text-[#0a1f58] text-xl mb-1">Integrity</p>
+              <p class="text-lg text-black/40 leading-relaxed">
+                Ethical, compliant processes.
+              </p>
+            </div>
+            <div class="bg-[#f9efec] rounded-2xl p-5">
+              <div
+                class="w-10 h-10 rounded-xl bg-[#0a1f58] flex items-center justify-center mb-3"
+              >
+                <i data-lucide="lock" class="h-4 w-4 text-white"></i>
+              </div>
+              <p class="font-bold text-[#0a1f58] text-xl mb-1">Security</p>
+              <p class="text-lg text-black/40 leading-relaxed">
+                Safe, encrypted transactions.
+              </p>
+            </div>
+            <div class="bg-[#f9efec] rounded-2xl p-5">
+              <div
+                class="w-10 h-10 rounded-xl bg-[#0a1f58] flex items-center justify-center mb-3"
+              >
+                <i data-lucide="heart" class="h-4 w-4 text-white"></i>
+              </div>
+              <p class="font-bold text-[#0a1f58] text-xl mb-1">
+                Customer First
+              </p>
+              <p class="text-lg text-black/40 leading-relaxed">
+                User-focused support always.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DIVIDER -->
+      <hr class="border-black/5" />
+
+      <!-- HOW IT WORKS -->
+      <section class="py-20">
+        <p
+          class="text-s font-bold tracking-[0.2em] uppercase text-[#0a1f58]/40 mb-3 text-center"
+        >
+          The Process
+        </p>
+        <h2 class="text-3xl font-bold text-[#0a1f58] mb-12 text-center">
+          How It Works
+        </h2>
+        <div class="grid md:grid-cols-2 gap-10">
+          <!-- Sellers -->
+          <div class="border-2 border-[#0a1f58] rounded-2xl p-8">
+            <div class="flex items-center gap-3 mb-7">
+              <div
+                class="w-9 h-9 rounded-xl bg-[#0a1f58] flex items-center justify-center shrink-0"
+              >
+                <i data-lucide="tag" class="h-4 w-4 text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-[#0a1f58]">For Sellers</h3>
+            </div>
+            <div class="divide-y divide-black/5">
+              <div class="flex items-center gap-4 py-3.5">
+                <span
+                  class="w-7 h-7 rounded-full bg-[#0a1f58] text-white flex items-center justify-center text-xs font-bold shrink-0"
+                  >1</span
+                >
+                <p class="text-black/60 text-lg">
+                  List your vehicle with details and photos
+                </p>
+              </div>
+              <div class="flex items-center gap-4 py-3.5">
+                <span
+                  class="w-7 h-7 rounded-full bg-[#0a1f58] text-white flex items-center justify-center text-xs font-bold shrink-0"
+                  >2</span
+                >
+                <p class="text-black/60 text-lg">
+                  Complete document verification
+                </p>
+              </div>
+              <div class="flex items-center gap-4 py-3.5">
+                <span
+                  class="w-7 h-7 rounded-full bg-[#0a1f58] text-white flex items-center justify-center text-xs font-bold shrink-0"
+                  >3</span
+                >
+                <p class="text-black/60 text-lg">
+                  Receive buyer inquiries and negotiate
+                </p>
+              </div>
+              <div class="flex items-center gap-4 py-3.5">
+                <span
+                  class="w-7 h-7 rounded-full bg-[#0a1f58] text-white flex items-center justify-center text-xs font-bold shrink-0"
+                  >4</span
+                >
+                <p class="text-black/60 text-lg">
+                  Finalize pricing and paperwork
+                </p>
+              </div>
+              <div class="flex items-center gap-4 py-3.5">
+                <span
+                  class="w-7 h-7 rounded-full bg-[#0a1f58] text-white flex items-center justify-center text-xs font-bold shrink-0"
+                  >5</span
+                >
+                <p class="text-black/60 text-lg">Securely receive payment</p>
+              </div>
+            </div>
+          </div>
+          <!-- Buyers -->
+          <div class="bg-[#0a1f58] rounded-2xl p-8">
+            <div class="flex items-center gap-3 mb-7">
+              <div
+                class="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center shrink-0"
+              >
+                <i data-lucide="search" class="h-4 w-4 text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white">For Buyers</h3>
+            </div>
+            <div class="divide-y divide-white/10">
+              <div class="flex items-center gap-4 py-3.5">
+                <span
+                  class="w-7 h-7 rounded-full bg-white/10 text-white flex items-center justify-center text-xs font-bold shrink-0"
+                  >1</span
+                >
+                <p class="text-white/60 text-lg">
+                  Browse verified vehicle listings
+                </p>
+              </div>
+              <div class="flex items-center gap-4 py-3.5">
+                <span
+                  class="w-7 h-7 rounded-full bg-white/10 text-white flex items-center justify-center text-xs font-bold shrink-0"
+                  >2</span
+                >
+                <p class="text-white/60 text-lg">
+                  Compare features, mileage and pricing
+                </p>
+              </div>
+              <div class="flex items-center gap-4 py-3.5">
+                <span
+                  class="w-7 h-7 rounded-full bg-white/10 text-white flex items-center justify-center text-xs font-bold shrink-0"
+                  >3</span
+                >
+                <p class="text-white/60 text-lg">
+                  Schedule an inspection or test ride
+                </p>
+              </div>
+              <div class="flex items-center gap-4 py-3.5">
+                <span
+                  class="w-7 h-7 rounded-full bg-white/10 text-white flex items-center justify-center text-xs font-bold shrink-0"
+                  >4</span
+                >
+                <p class="text-white/60 text-lg">
+                  Make a secure, transparent payment
+                </p>
+              </div>
+              <div class="flex items-center gap-4 py-3.5">
+                <span
+                  class="w-7 h-7 rounded-full bg-white/10 text-white flex items-center justify-center text-xs font-bold shrink-0"
+                  >5</span
+                >
+                <p class="text-white/60 text-lg">
+                  Complete RC transfer with our help
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  
+      <section class="pb-10">
+        <div
+          class="bg-[#0a1f58] rounded-3xl py-14 px-10 text-center text-white"
+        >
+          <h2 class="text-3xl font-extrabold mb-3">
+            Start Your Vehicle Journey Today
+          </h2>
+          <p class="text-white/50 mb-8 max-w-md mx-auto text-lg">
+            Whether you're buying or selling, ReRide ensures a safe,
+            transparent, and seamless experience.
+          </p>
+          <div class="flex justify-center gap-4 flex-wrap">
+            <a
+              href="sell.html"
+              class="bg-white text-[#0a1f58] px-8 py-3 rounded-xl font-bold hover:bg-[#f9efec] transition"
+              >List Your Vehicle</a
+            >
+            <a
+              href="Buy.html"
+              class="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-[#0a1f58] transition"
+              >Browse Vehicles</a
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="bg-[var(--secondary)] pb-10">
+      <hr class="border-0 h-1 opacity-20% mb-5 bg-gray-600" />
+      <div class="flex py-5">
+        <div class="w-1/3 pl-30">
+          <img src="images/logo white.png" alt="logo" class="h-15 w-50" />
+          <p class="text-white pt-3">
+            Trusted by thousands of riders in Bengaluru.
+          </p>
+          <p class="text-white">
+            The safest way to buy and sell used two-wheelers.
+          </p>
+        </div>
+        <div class="text-white w-1/3 pl-30">
+          <p class="text-xl pb-3 pl-15">Quick Links</p>
+          <ul class="pl-15">
+            <li class="pb-2"><a href="Buy.html" class="">Buy Used Bikes</a></li>
+            <li class="pb-2"><a href="sell.html">Sell Your Bike</a></li>
+            <li class="pb-2"><a href="about.html">About us</a></li>
+          </ul>
+        </div>
+        <div class="text-white">
+          <p class="text-xl pb-3 pl-15">Contact Us</p>
+          <p class="pl-15">Jalhalli, Bengaluru, KA 560038</p>
+          <a href="" class="pl-15 pt-3">support@reride.com</a>
+          <p class="flex items-center pl-15 justify-between w-40 pt-4">
+            <a href="https://www.facebook.com/" ><i data-lucide="facebook"></i></a>
+            <a href="https://www.instagram.com/?hl=en" ><i data-lucide="instagram"></i></a>
+            <a href="https://x.com/" ><i data-lucide="twitter"></i></a>
+          </p>
+        </div>
+      </div>
+      <hr class="border-0 h-1 opacity-20% mb-5 mt-5 bg-gray-600" />
+      <p class="text-white text-center pt-3">
+        © 2026 ReRide Bikes. design and developed by thincnext
+      </p>
+    </footer>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

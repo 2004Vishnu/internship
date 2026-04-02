@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buy Vehicles | ReRide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-[var(--primary)] ">
+
+<!-- NAVBAR -->
+<nav class="bg-[#f9efec] shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <img src="images/Reride_Logo.png" class="h-10">
+    <ul class=" md:flex gap-8 font-medium text-[#0a1f58]">
+      <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+      <li><a href="Buy.html" class="hover:text-blue-600 border-b-4 border-[var(--secondary)]">Buy</a></li>
+      <li><a href="sell.html" class="hover:text-blue-600">Sell</a></li>
+      <li><a href="about.html" class="hover:text-blue-600">About</a></li>
+      <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div class="flex-1">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex gap-10">
+
+    <!-- SIDEBAR -->
+    <aside class="w-72 bg-white rounded-xl p-6 space-y-8 h-fit sticky top-10 text-[var(--secondary)]">
+
+      <h2 class="text-lg font-bold border-b border-gray-600 pb-3 text-[var(--secondary)]">Filters</h2>
+
+      <!-- VEHICLE TYPE (NEW FIRST FILTER) -->
+      <div>
+        <h3 class="font-semibold mb-3">Vehicle Type</h3>
+        <div id="typeFilter" class="space-y-2 text-sm"></div>
+      </div>
+
+      <!-- BRAND -->
+      <div>
+        <h3 class="font-semibold mb-3">Brand</h3>
+        <div id="brandFilter" class="space-y-2 text-sm"></div>
+      </div>
+
+      <!-- COLOUR -->
+      <div>
+        <h3 class="font-semibold mb-3">Colour</h3>
+        <div id="colourFilter" class="space-y-2 text-sm"></div>
+      </div>
+
+      <!-- PRICE -->
+      <div>
+        <h3 class="font-semibold mb-3">Price Range</h3>
+
+        <div class="flex justify-between text-sm mb-2">
+          <span id="priceMinLabel">₹ 0</span>
+          <span id="priceMaxLabel">₹ 0</span>
+        </div>
+
+        <input type="range" id="minPriceRange"
+          min="20000" max="300000" step="5000"
+          class="w-full accent-blue-500">
+
+        <input type="range" id="maxPriceRange"
+          min="20000" max="300000" step="5000"
+          class="w-full accent-blue-500 mt-3">
+      </div>
+
+      <!-- YEAR -->
+      <div>
+        <h3 class="font-semibold mb-3">Year</h3>
+        <select id="yearFilter"
+          class="w-full p-2 rounded text-black text-sm">
+          <option value="">All Years</option>
+        </select>
+      </div>
+
+      <!-- SORT -->
+      <div>
+        <h3 class="font-semibold mb-3">Sort By</h3>
+        <select id="sortOption"
+          class="w-full p-2 rounded text-black text-sm">
+          <option value="">None</option>
+          <option value="priceLow">Price: Low to High</option>
+          <option value="priceHigh">Price: High to Low</option>
+          <option value="yearNew">Newest First</option>
+          <option value="yearOld">Oldest First</option>
+        </select>
+      </div>
+
+    </aside>
+
+    <!-- PRODUCTS -->
+    <section class="flex-1">
+      <div id="bikeList"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      </div>
+
+      <div class="text-center mt-12">
+        <button id="loadMoreBtn"
+          class="bg-[var(--secondary)] text-[var(--primary)] px-8 py-3 rounded-lg font-semibold hidden">
+          Load More
+        </button>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!--Footer-->
+<footer class="bg-[var(--secondary)] py-10">
+  <div>
+    <p class="text-white text-center text-3xl ">Ready to ride?</p>
+    <p class="text-white text-center text-lg pb-5">whether you are upgrading or selling, we make it simple.</p>
+    <div class="flex justify-center pb-10 ">
+      <a href="Buy.html" class="bg-white text-[var(--secondary)] px-6 py-3 rounded-xl font-semibold">Buy a Bike</a>
+      <a href="sell.html" class="text-white bg-[var(--secondary)] px-4 py-2 ml-5 rounded-xl font-semibold border-2 border-white">Sell Your Bike</a>
+    </div>
+  </div>
+  <hr class="border-0 h-1 opacity-20% mb-5 bg-gray-600">
+  <div class="flex py-5">
+    <div class="w-1/3 pl-28">
+      <img src="images/logo white.png" alt="logo" class="h-16 w-50">
+      <p class="text-white pt-3">Trusted by thousands of riders in Bengaluru.</p>
+      <p class="text-white ">The safest way to buy and sell used two-wheelers.</p>
+    </div>
+    <div class="text-white  w-1/3 pl-36">
+      <p class="text-xl pb-3 pl-15">Quick Links</p>
+      <ul class="pl-15">
+        <li class="pb-2"><a href="Buy.html" class="">Buy Used Bikes</a></li>
+        <li class="pb-2"><a href="sell.html">Sell Your Bike</a></li>
+        <li class="pb-2"><a href="about.html">About us</a></li>
+      </ul>
+    </div>
+    <div class="text-white w-1/3 pl-24">
+      <p class="text-xl pb-3 pl-15">Contact Us</p>
+      <p class="pl-15">Jalhalli, Bengaluru, KA 560038</p>
+      <a href="" class="pl-15 pt-3">support@reride.com</a>
+      <p class="flex items-center pl-15 justify-between w-40 pt-4">
+        <a href="https://www.facebook.com/" ><i data-lucide="facebook"></i></a>
+        <a href="https://www.instagram.com/?hl=en" ><i data-lucide="instagram"></i></a>
+        <a href="https://x.com/" ><i data-lucide="twitter"></i></a>
+        </p>
+    </div>
+  </div>
+  <hr class="border-0 h-1 opacity-20% mb-5 mt-5 bg-gray-600">
+  <p class="text-white text-center pt-3">© 2026 ReRide Bikes. design and developed by thincnext</p>
+</footer>
+
+<script src="buy.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

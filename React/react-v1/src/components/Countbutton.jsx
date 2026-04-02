@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Counter from './Counter.jsx'
 import Nav from './Nav.jsx';
 // function Countbutton({setcount, count}){
@@ -7,7 +7,9 @@ import Nav from './Nav.jsx';
 //     )
 // }
 const Countbutton=()=>{
+    
     let [count,setcount]=useState(0);
+    useEffect(() =>{console.log("value changed")},[count])
     return(
         <div className="counter">
             <Counter count={count}/>
