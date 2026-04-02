@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../components/Weather.css'
 const Whether = () => {
-    // let Api_key="0fd94618afb28f315becd8704896aa48";
-    // let weather="https://api.openweathermap.org/data/3.0/onecall?lat=${12.976}&lon={lon}&exclude={part}&appid={Api_key}"
+    
     const [Wdata,setWdata]=useState(null);
     useEffect(() => {
         getwhether();
